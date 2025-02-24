@@ -20,6 +20,11 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  /* Changes made from here */
+  display: flex;
+  /* justify-content: space-evenly; REDUNDANT*/
+  gap: 20px;
+  padding: 20px;
 }
 
 .icon {
@@ -33,6 +38,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Changes from here */
+  flex-shrink: 0;
+}
+
+/* .information {
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  gap: 10px;
+} Don't need to style the container*/
+
+.header {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* This added from solution */
+.text {
+  margin-bottom: 16px;
 }
 
 .close-button {
