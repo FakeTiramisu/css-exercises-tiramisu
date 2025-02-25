@@ -11,12 +11,16 @@ body {
   overflow: hidden;
   font-family: Roboto, sans-serif;
   font-size: 0.8rem;
+  font-weight: bold;
+  /* Changes from here */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Remove underscores on links and change color */
 a {
   text-decoration: none;
-  color: #8f8f8f;
+  color: #666;
 }
 
 /* Remove bullet points on list */
@@ -33,6 +37,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /* Changes from here */
+  padding: 8px 16px; /* Added from solution */
 }
 
 input {
@@ -44,17 +50,32 @@ input {
 
 /* My Cusomtised CSS */
 /* Align navigation horizontally */
-.header {
+/* Changed from solution to apply same property on footer and to 
+use justify content space between instead of margin-right: auto */
+.header, .footer {
   /* Header (navigation) container */
   display: flex;
   padding: 12px;
-}
-
-.left-links {
-  margin-right: auto;
+  justify-content: space-between;
 }
 
 .right-links, .left-links {
   display: flex;
-  gap: 8px;
+  gap: 16px;
+}
+
+/* CONTENT CSS */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  /* Added from solution, then content is stretched in the middle */
+  flex: 1; 
+}
+
+/* Footer CSS */
+.footer {
+  background-color: #eee;
 }
